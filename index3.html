@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../work/font-awesome-4.7.0/css/font-awesome.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            background-image: url(./desktop/image-header.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 100vh;
+            transition: padding 2s;
+        }
+        .nav{
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-between;
+           
+            /* margin-top:5px; */
+        }
+        .nav h1{
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 30px 20px;
+            font-weight: 800;
+        }
+        .nav .con a{
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: none;
+            margin: 20px;
+            font-weight: 600;
+            font-size: 20px;
+
+        }
+        .nav .con {
+            padding: 30px 20px;
+        }
+        .con button{
+            background-color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 30px;
+            color: rgb(1, 1, 35);
+            font-weight: 800;
+            font-size:20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .title{
+            /* border: 1px solid red; */
+            width: fit-content;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        .title h1{
+            font-weight: 600;
+            font-size:60px;
+            font-family:Arial, Helvetica, sans-serif;
+            color: white;
+            padding: 20px 50px;
+            margin-bottom: 60%;
+        }
+        .about{
+            background-color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            height: auto;
+        }
+        .about img{
+            height:500px;
+            width: 100%;
+        }
+        .about .box{
+            /* border: 1px solid red; */
+            display: block;
+            padding: 90px 90px;
+            
+        }
+        .about .box1{
+            /* border: 1px solid red; */
+            display: block;
+            padding: 90px 90px;
+            
+        }
+        .about .box h1,p{
+            text-align: justify;
+            
+        }
+        .about .box h1{
+            margin-bottom: 30px;
+            color: rgb(35, 10, 77);
+            font-weight: 800;
+            font-size: 25pt;
+            padding-top: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .about .box p{
+            color: rgb(135, 135, 142);
+            font-weight: 400;
+            font-size: 12pt;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 35px;
+        }
+        .about .box button{
+            border: none;
+            background-color: rgb(251, 251, 166);
+            padding: 10px 15px;
+            color: rgb(35, 10, 77);
+            font-weight: 600;
+            font-size: 14pt;
+            border-radius: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+
+        .about .box1 h1,p{
+            text-align: justify;
+            
+        }
+        .about .box1 h1{
+            margin-bottom: 30px;
+            color: rgb(35, 10, 77);
+            font-weight: 800;
+            font-size: 25pt;
+            padding-top: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .about .box1 p{
+            color: rgb(135, 135, 142);
+            font-weight: 400;
+            font-size: 12pt;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 35px;
+        }
+
+
+       
+        .about .box1 button{
+            border: none;
+            background-color: rgb(255, 157, 209);
+            padding: 10px 15px;
+            color: rgb(35, 10, 77);
+            font-weight: 600;
+            font-size: 14pt;
+            border-radius: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+        .picture{
+            background-image: url(./desktop/image-graphic-design.jpg);
+            height: 65vh;
+
+        }
+        .picture1{
+            background-image: url(./desktop/image-photography.jpg);
+            height: 65vh;
+
+        }
+        .picture h1{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-top: 340px;
+         
+        }
+        .picture1 h1{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-top: 340px;
+         
+         
+        }
+        .picture p{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: justify;
+            font-size: 10pt;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .picture1 p{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 10pt;
+            padding: 0 50px;
+            margin-top: 10px;
+        }
+        .service{
+            background-color: white;
+            
+        }
+        .service .top h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 18pt;
+            padding: 0 50px;
+            margin-top: 12%;
+            color: rgba(40, 37, 37, 0.595);
+        }
+        .service .div{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 80px;
+            /* border: 1px  solid red; */
+            padding: 50px 50px;
+            margin: 0 20px;
+        }
+        .service .div .vivi p{
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 10pt;
+        margin-bottom: 30px;
+
+        }
+        .service .div .vivi img{
+            border-radius: 50%;
+            height: 90px;
+            width: 90px;
+            margin-left: 40%;
+            margin-bottom: 30px;
+        }
+        .service .div .vivi h2{
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 10pt;
+        margin-bottom: 10px;
+        }
+        .service .div .vivi h4{
+            text-align: center;
+            color: gray;
+            
+        }
+        .contact{
+            background-color: rgb(142, 225, 252);
+            height: 120%;
+        }
+        .contact .sec{
+            display: flex;
+            margin-top: 60px;
+            
+        }
+        .contact .sec img{
+            height: 490px;
+            width: 25%;
+        }
+        .conta{
+            /* border: 1px solid red; */
+            width: fit-content;
+            margin: 0 auto;
+            padding: 20px 50px;
+            margin-top: 2%;
+        }
+        .conta h1{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20pt;
+        font-weight: 600;
+        margin-bottom: 30px;
+        color: rgb(3, 112, 74);
+        }
+        .conta a{
+        text-decoration: none;
+        color: rgb(3, 112, 74);
+        margin: 30px;
+        font-weight: 600;
+        transition: .4s ease;
+        
+       
+        }
+        .conta a:hover{
+            color: aliceblue;
+        }
+        .conta div{
+      padding: 40px 20px;
+      /* border: 1px solid red; */
+      width: fit-content;
+      margin: 0 auto;
+ 
+    }
+    .conta div i{
+    margin: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color:  rgb(3, 112, 74);
+    transition: .4s ease;
+    }
+    .conta div i:hover{
+            color: aliceblue;
+    }
+    @media(max-width:150px){
+        .con{
+            display: flex;
+            position: fixed;
+            height: 50%;
+            width: 10px;
+            right: -200px;
+            flex-direction: column;
+        }
+        /* .nav .navToggled{
+            right: 0;
+            background-color: blueviolet;
+
+        } */
+        body .conToggled{
+            padding-right: 100px;
+        
+        }
+        body .conToggled.con{
+         right: 0;
+         background-color: blueviolet;
+        }
+        #con{
+            display: block;
+        }
+        #closeCon{
+            display: block;
+        }
+
+    }
+        
+    </style>
+</head>
+<body>
+    <section class="nav" id="home">
+        
+        <h1>Sunnyside</h1>
+        <!-- <button class="closeCon" id="closeCon" onclick="toggleCon()" style="padding: 10px; background-color: red;"> -->
+            <!-- <i style="font-size: 30px;" class="fa fa-home"></i>
+        </button> -->
+        <div class="con" id="con">
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Projects</a>
+       <button>CONTACT</button> 
+    </div>
+    <button style="height: 40px;border: none;background-color: transparent;" id="con" onclick="toggleCon()">
+        <i style="padding:0px 10px;font-size: 30px; color: white;" class="fa fa-bars"></i>
+      </button>
+    </section>
+  <div class="title">
+    <h1>WE  ARE CREATIVES</h1>
+    <p></p>
+  </div>
+  <section class="about">
+    <div class="box">
+        <h1>Transform your <br> brand</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing <br>
+             elit.Laborum non facilis facere ipsum adipisci ipsam. <br>
+              Nihil officia atque iste laudantium.</p>
+        <button>Learn More</button>
+    </div>
+    <div>
+        <img src="./desktop/image-transform.jpg" alt="">
+    </div>
+    <div>
+        <img src="./desktop/image-stand-out.jpg" alt="">
+    </div>
+    <div class="box1">
+        <h1>Stand out to the right <br> audience</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing <br>
+            elit.Laborum non facilis facere ipsum adipisci ipsam. <br>
+             Nihil officia atque iste laudantium.</p>
+        <button>learn More</button>
+    </div>
+    <div class="picture">
+        <h1>Graphic Design</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+             At explicabo nam inventore nostrum hic culpa praesentium,<br> 
+             doloribus neque? Molestias, laborum!</p>
+    </div>
+    <div class="picture1">
+
+        <h1>Photography</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+            At explicabo nam inventore nostrum hic culpa praesentium,<br> 
+            doloribus neque? Molestias, laborum!</p>
+    </div>
+
+  </section>
+
+  <section class="service">
+    <div class="top">
+    <h1>CLIENT TESTIMONIALS</h1>
+</div>
+<div class="div">
+    <div class="vivi">
+        <img src="./desktop/image-emily.jpg" alt="">
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+             Excepturi, doloremque nisi. Illo accusamus atque corrupti <br>
+              dolores omnis! Corporis, sunt.</p>
+        <h2>Emily R.</h2>
+        <h4>Marketing Director</h4>
+    </div>
+    <div class="vivi">
+        <img src="./desktop/image-thomas.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+             Excepturi, doloremque nisi. Illo accusamus atque corrupti <br>
+              dolores omnis! Corporis, sunt.</p>
+        <h2>Thomas S.</h2>
+        <h4>Chief Operating Officer</h4>
+    </div>
+    <div class="vivi">
+        <img src="./desktop/image-jennie.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+             Excepturi, doloremque nisi. Illo accusamus atque corrupti <br>
+              dolores omnis! Corporis, sunt.</p>
+        <h2>Jennie F.</h2>
+        <h4>Business Owner</h4>
+    </div>
+</div>
+
+  </section>
+
+  <section class="contact">
+    <div class="sec">
+        <img src="./desktop/image-gallery-milkbottles.jpg" alt="">
+        <img src="./desktop/image-gallery-orange.jpg" alt="">
+        <img src="./desktop/image-gallery-cone.jpg" alt="">
+        <img src="./desktop/image-gallery-sugarcubes.jpg" alt="">
+    </div>
+  <div class="conta">
+    <h1>Sunnyside</h1>
+    <a href="">About</a>
+    <a href="">Services</a>
+    <a href="">Projects</a>
+    <div>
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-whatsapp"></i>
+</div>
+  </div>
+  </section>
+  <script>
+    // function toggleNav() {
+    //   let nav = document.getElementById('nav');
+    //   nav.classList.toggle('navToggled');
+    //   console.log('Nav is toggled')
+    // }
+    function toggleCon() {
+      let body = document.getElementById('body');
+      body.classList.toggle('conToggled');
+      console.log('Con is toggled')
+    }
+  </script>
+</body>
+</html>
